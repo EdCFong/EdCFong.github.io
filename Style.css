@@ -1,0 +1,426 @@
+html, body, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote 
+{
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+   
+body
+{
+  --main-color: rgb(0, 102, 255);
+  --second-color: rgb(27, 26, 26); 
+  --text-color: rgb(203, 220, 241); 
+  --main-border-color: rgb(0, 0, 0);
+  --second-border-color: rgb(2, 16, 78);
+  --link-color: rgb(245, 234, 200);
+  --link-color-stronger: rgb(228, 231, 54);  
+
+  --main-border-radius: 5px;
+  --second-border-radius: 3px;
+
+  background-color: var(--second-color); 
+  font-family: 'Titillium Web', sans-serif;
+  position: relative;
+}
+a
+{
+  color: var(--link-color) ;
+  text-decoration: none;
+}
+
+
+/* Head Section *************************************************************************************************** */
+
+#head
+{
+  background-color:var(--main-color) ;
+  color: var(--text-color);
+  height: 100vh;
+}
+#head strong
+{
+  color: var(--link-color-stronger) ; 
+}
+#presentationMessage
+{
+  position: absolute;
+  left: 30%;
+  top: 40vh;
+}
+#head nav
+{
+ position: absolute;
+ padding: 0.7em;
+ top: 0%;
+ right: 0%;
+}
+#head ul
+{
+  list-style: none;
+}
+#head li
+{
+  display: inline;
+  margin: 0em 1em;
+}
+#head a
+{
+  color: var(--link-color-stronger);
+  
+}
+
+/* Container **************************************** */ 
+#container
+{
+  margin: 10vh 0;
+  display: grid;
+  grid-template-columns: 10vw 1fr 10vw;
+  grid-auto-flow: column;
+  grid-row-gap: 7em;
+}
+#container > * {
+  grid-column: 2 / -2;
+}
+
+
+/* AboutMe ********************************************************************************************************* */
+#Me
+{   
+  display: grid;  
+  grid-template-columns: 50% 50%;
+  height: auto;
+}
+/* Left  - WhoIam ***************************************************** */
+#whoIam
+{
+  color: var(--text-color);
+}
+#whoIam_header 
+{
+  display: flex;
+  align-items: center;
+  height: 10em;
+  margin-left: 10%;
+}
+#whoIam_header img
+{
+  height: 7em;
+  width: 7em;
+  border-radius: var(--main-border-radius);
+  border: 2px solid var(--main-border-color);
+}
+#whoIam_header h2
+{
+  text-align: left;
+  margin-left: 5%;
+}
+#whoIam p
+{
+  margin: 5% 10% 5% 10%;
+  text-align: left;
+}
+
+#arrow 
+{
+  margin-bottom: 20vh;
+  margin-left: 40%;
+  color: var(--main-color) ; 
+  text-align: center;
+  font-size: 3em;
+}
+#arrow :hover
+{
+  transform: rotate(90deg);
+}
+
+/* Right  - Skills  *************************************************** */
+
+#skillsSection
+{
+  background-color: var(--main-color);
+  padding: 3vh 5vw;
+  color:  var(--text-color); 
+}
+#skills
+{
+  display: flex;
+  flex-direction: column;
+  border: 1.7px dashed var(--main-border-color); 
+  padding: 2em;
+}
+  
+.skill
+{
+  display: flex;
+  align-items: center;
+  padding: 0.35em;
+  border-radius: var(--main-border-radius);
+}
+.skill img
+{
+  height: 3vh;
+  width: 2.5vw;
+  border-radius: var(--main-border-radius); 
+}
+.skill i
+{
+  text-align: left;
+  margin-left: 5%;
+}
+
+/*  Certifications   **********************************************************  */
+#certifications
+{
+  color: var(--text-color);
+  background-color: var(--main-color);
+}
+#certifications h1
+{
+  margin-left: 2vw;
+}
+#certificationsContainer > div
+{
+  display: grid;   
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  overflow-x: hidden;
+  width: 80vw;
+}
+.certificationBoard
+{
+  margin: 4vh 2vw 0vh 2vw;    
+  width: 76vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(20em, 1fr));
+  grid-gap: 1.5em;
+  justify-items: center;
+  padding-bottom: 1em;
+}
+.certification
+{
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--main-border-radius); 
+  box-shadow: -7px 7px 9px -5px rgba(14, 13, 13, 0.75);
+  background:  var(--second-color);
+}
+.certification img
+{
+  height:25vh;
+  margin: 0.5em; 
+  border-radius: var(--second-border-radius);  
+}
+.certification p
+{
+  margin: 0.5em 1em 0em 0.7em; 
+}
+.certification a
+{
+  margin: 0em 0.9em 0.5em 0.9em; 
+
+  font-size: 0.8em; 
+}
+.certificationsDots
+{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  /* Reset styles */
+  list-style-type: none;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+.dot 
+{
+  /* Rounded border */
+  border-radius: 9999px;
+  height: 12px;
+  width: 12px; 
+  border: 1px solid rgba(0, 0, 0, .3);
+
+  /* Spacing between dots */ 
+  margin: 0 4px;
+}
+
+/* Projects     ***************************************************************** */
+#projectsSection
+{
+  background-color: var(--main-color) ;
+  height: auto;
+}
+#projectsSection h1
+{
+  color: var(--text-color);
+  margin-left: 2vw;
+}
+#h2-moreProjects
+{
+ text-align: center;
+ margin-top: 8vh;
+ color: var(--link-color-stronger);
+ font-weight: lighter;
+}
+#projects
+{
+ margin: 6vh 3vw 0vh 3vw; 
+ height: auto;
+ display: grid;
+ grid-template-columns: repeat(auto-fit,minmax(14em, 1fr));
+ grid-gap: 1.5em;
+}
+.project
+{
+  background-color: rgb(0, 0, 0);
+  color: var(--main-color);
+  box-shadow: -7px 7px 9px -5px rgba(14, 13, 13, 0.75);
+  border: 2px solid var(--second-border-color);
+  border-radius: var(--main-border-radius); 
+  display: flex;
+  flex-direction: column;
+}
+.project :hover
+{
+
+}
+.project h2
+{
+  font-weight: lighter;
+  margin: 7px 5px 7px 15px;
+}
+.project div
+{
+  margin: 10px;  
+  height: 100%;
+  background:  var(--second-color);
+  
+  border-radius: var(--second-border-radius);
+  color: var(--text-color);
+}
+.project img
+{
+  height:20vh;
+  width: 96%; 
+  margin: 2% 2% 0 2%;
+  border: 1px solid var(--div-text-color);
+  border-radius: var(--second-border-radius);
+}
+.project ul
+{
+  list-style-type: square;
+  margin: 5px 7px 15px 25px;
+  padding: 0;
+}
+.project li
+{
+  text-align: left;
+  font-size: 15px;
+}
+
+
+/* Information    ****************************************************************************** */
+#information
+{
+  margin-top: 20vh;
+  margin-bottom: 0vh;
+  height:auto ;
+  display: grid;
+  grid-template-columns: 5vw 1fr 5vw;
+  grid-auto-flow: column;
+  grid-row-gap: 1vh;
+  background-color: var(--main-color);
+}
+#information > * {
+  grid-column: 2 / -2;
+}
+#contact
+{
+  color: var(--text-color);
+  font-size: 1.2em;
+  margin-top: 1em;
+}
+#information h2
+{
+  color: var(--text-color);
+}
+#information inline
+{
+  color: var(--link-color-stronger);
+}
+
+/* Social medias *********************************** */
+#social_media_box
+{
+  border-radius: var(--main-border-radius);
+  background: var(--second-color);
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(9em, 1fr));
+  grid-gap: 1em;
+  padding: 1em 1.5em;
+  align-items: center;
+}
+#social_media_box p
+{
+  margin: 5% 10% 10% 10%;
+  font-size: 1.1em;
+}
+.social_media
+{
+  height: 15vh; 
+  background: var(--second-color);
+  color: var(--link-color); 
+  text-align: center;
+  padding-top: 2vh;
+}
+.social_media:hover
+{
+  transform:scale(1.15);
+}
+.social_media_icon
+{
+  height: 8vh;
+  min-width: 6vw;
+  border-radius: 5px;
+}
+#FreeCodeCamp_icon
+{
+  background: green;
+}
+#Github_icon
+{
+  background: rgb(230, 174, 137);
+}
+#Stackoverflow_icon
+{
+  background: rgb(212, 222, 238);;
+}
+
+/* More Links      ************************************ */
+#moreLinks
+{
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  justify-content: start;
+  grid-gap: 2em;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+#moreLinks ul
+{
+ list-style: none;
+}
+#moreLinks p
+{
+  font-size: 1.2em;
+  font-weight: bold;
+  color: black;
+}
+#moreLinks a
+{
+ color: var(--link-color-stronger);
+ margin-left: 0.4em;
+ margin-top: 0.2em;
+}
