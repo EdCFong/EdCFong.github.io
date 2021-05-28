@@ -179,7 +179,7 @@ a
 {
   margin-left: 2vw;
 }
-#certificationsContainer > div
+#certificationsContainer
 {
   display: grid;   
   grid-auto-flow: column;
