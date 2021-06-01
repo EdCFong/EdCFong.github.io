@@ -181,16 +181,18 @@ a
 }
 #certificationsContainer
 {
-  display: grid;   
-  grid-auto-flow: column;
-  grid-auto-columns: max-content;
-  overflow-x: hidden;
   width: 80vw;
+  overflow-x: hidden;
+}
+#boardContainer
+{
+  display: grid;
+  width: auto;
+  grid-template-columns: repeat(2,80vw);
 }
 .certificationBoard
 {
-  margin: 4vh 2vw 0vh 2vw;    
-  width: 76vw;
+  margin: 4vh 2vw 0vh 2vw;  
   height: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(20em, 1fr));
@@ -239,7 +241,7 @@ a
   border-radius: 9999px;
   height: 12px;
   width: 12px; 
-  border: 1px solid rgba(0, 0, 0, .3);
+  border: 1px solid rgba(0, 0, 0, .5);
 
   /* Spacing between dots */ 
   margin: 0 4px;
