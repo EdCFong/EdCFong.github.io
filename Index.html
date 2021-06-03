@@ -26,11 +26,11 @@
    <div id="head">
       <nav>
          <ul>
-            <li><a href>Story</a></li>
-            <li><a href>Blog</a></li>
-            <li><a href>Tutorials</a></li>
-            <li><a href>Tools</a></li>
-            <li><a href>Linux</a></li>
+            <li><a href onclick="PageNotReady_message()">Story</a></li>
+            <li><a href onclick="PageNotReady_message()">Blog</a></li>
+            <li><a href onclick="PageNotReady_message()">Tutorials</a></li>
+            <li><a href onclick="PageNotReady_message()">Tools</a></li>
+            <li><a href onclick="PageNotReady_message()">Linux</a></li>
          </ul>
       </nav>
       <div id="presentationMessage">
@@ -45,7 +45,7 @@
          <div id="whoIam">
 
             <div id="whoIam_header">
-               <img src='./imagen/Myself.png' alt="This is me" />
+               <img src='./imagen/Myself.jpg' alt="This is me" />
                <h2>Who I am?</h2>
             </div>
             <p> I am a student of computerized information systems at the <a href="http://ut.suagm.edu" target="_blank"
@@ -142,7 +142,7 @@
             </div>
          </div>
          <a href>
-            <h2 id="h2-moreProjects">See more projects here</h2>
+            <h2 id="h2-moreProjects" onclick="PageNotReady_message()">See more projects here</h2>
          </a>
       </div>
 
@@ -190,8 +190,7 @@
          </div>
       </div>
 
-      <p id="contact">Contact me by <inline>eduardcf90@gmail.com</inline>
-      </p>
+      
       <div id="moreLinks">
          <div id="personalInformation">
             <p>Information</p>
@@ -224,6 +223,10 @@
             </ul>
          </div>
       </div>
+
+      <p id="contact">Contact me by <inline>eduardcf90@gmail.com</inline>
+      </p>
+      <p id="UpdateDate">Last update in June 2021</p>
    </footer>
 
 
@@ -237,7 +240,8 @@
 
    <script src="./CustomEase.min.js"></script>
    <script src="./CertificationGSAP.js"></script>
-   
+   <script src="./Script.js"></script>
+
 </body>
 
 </html>
