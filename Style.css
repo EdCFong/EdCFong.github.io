@@ -28,6 +28,27 @@ a
   color: var(--link-color) ;
   text-decoration: none;
 }
+/* Scroll Bars *************************************************** */
+/* width */
+::-webkit-scrollbar {
+  width: 0.7em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(22, 92, 197); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(2, 63, 155); 
+  border-radius: var(--second-border-radius);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(72, 119, 248); 
+}
 
 
 /* Head Section *************************************************************************************************** */
@@ -110,7 +131,7 @@ a
   border-radius: var(--main-border-radius);
   border: 2px solid var(--main-border-color);
 }
-#whoIam_header h2
+#whoIam_header h1
 {
   text-align: left;
   margin-left: 5%;
@@ -147,7 +168,10 @@ a
   display: flex;
   flex-direction: column;
   border: 1.7px dashed var(--main-border-color); 
-  padding: 2em;
+  padding: 1.8em;
+  height: 41vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
 }
   
 .skill
@@ -160,13 +184,15 @@ a
 .skill img
 {
   height: 3vh;
-  width: 2.5vw;
+  width: 1.8vw;
+  padding: 0.1em;
   border-radius: var(--main-border-radius); 
+  background-color: var(--second-color);
 }
 .skill i
 {
   text-align: left;
-  margin-left: 5%;
+  margin-left: 5%;  
 }
 
 /*  Certifications   **********************************************************  */
