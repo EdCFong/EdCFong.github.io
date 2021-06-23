@@ -63,11 +63,17 @@ a
 {
   color: var(--link-color-stronger) ; 
 }
+#Container-presentationMessage
+{
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  
+}
+
 #presentationMessage
 {
-  position: absolute;
-  left: 30%;
-  top: 40vh;
+  padding-top: 40vh; 
+  grid-column-start: 2;
 }
 #head nav
 {
@@ -96,7 +102,7 @@ a
 {
   margin: 10vh 0;
   display: grid;
-  grid-template-columns: 10vw 1fr 10vw;
+  grid-template-columns: 5% 1fr 5%;
   grid-auto-flow: column;
   grid-row-gap: 7em;
 }
@@ -108,26 +114,29 @@ a
 /* AboutMe ********************************************************************************************************* */
 #Me
 {   
-  display: grid;  
-  grid-template-columns: 50% 50%;
+  display: flex;  
+  flex-direction: column;
+  margin: 0 auto;
   height: auto;
+  max-width: 1200px; 
 }
 /* Left  - WhoIam ***************************************************** */
 #whoIam
 {
   color: var(--text-color);
+  width: 100%;
+  margin-bottom: 3vh; 
 }
 #whoIam_header 
 {
   display: flex;
   align-items: center;
-  height: 10em;
-  margin-left: 10%;
+  height: 10em;  
 }
 #whoIam_header img
 {
-  height: 9em;
-  width: 12em;
+  height: 8em;
+  width: 10em;
   border-radius: var(--main-border-radius);
   border: 2px solid var(--main-border-color);
 }
@@ -138,7 +147,7 @@ a
 }
 #whoIam p
 {
-  margin: 5% 10% 5% 10%;
+  margin: 5% 0%;
   text-align: left;
 }
 
@@ -160,18 +169,17 @@ a
 #skillsSection
 {
   background-color: var(--main-color);
-  padding: 3vh 5vw;
+  padding: 3% 5% 10% 5%;
   color:  var(--text-color); 
 }
 #skills
 {
   display: flex;
   flex-direction: column;
-  border: 1.7px dashed var(--main-border-color); 
-  padding: 1.8em;
-  height: 41vh;
+  border: 1.7px dashed var(--main-border-color);  
+  height: 100%;
   overflow-y: auto;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory; 
 }
   
 .skill
@@ -209,16 +217,17 @@ a
 {
   width: 80vw;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 #boardContainer
 {
   display: grid;
-  width: auto;
+  width: 100%;
   grid-template-columns: repeat(2,80vw);
 }
 .certificationBoard
 {
-  margin: 4vh 2vw 0vh 2vw;  
+  margin: 4vh 2% 0vh 2%;  
   height: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(20em, 1fr));
@@ -349,16 +358,21 @@ a
 
 
 /* Information    ****************************************************************************** */
+footer
+{
+  background-color: var(--main-color);
+}
 #information
 {
   margin-top: 20vh;
   margin-bottom: 0vh;
   height:auto ;
   display: grid;
-  grid-template-columns: 5vw 1fr 5vw;
+  grid-template-columns: 5% 1fr 5%;
   grid-auto-flow: column;
   grid-row-gap: 1vh;
-  background-color: var(--main-color);
+  margin: 0 auto;
+  max-width: 1500px; 
 }
 #information > * {
   grid-column: 2 / -2;
@@ -459,3 +473,48 @@ a
  margin-left: 0.4em;
  margin-top: 0.2em;
 }
+
+
+@media (min-width: 900px) 
+{
+  #Me
+  {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #skillsSection
+  {  
+    width: 37%;
+    padding-bottom: 14%;
+  }
+  #whoIam
+  {
+    margin-bottom: 0;
+    width: 47%;
+  }
+  #Container-presentationMessage
+  {
+    grid-template-columns: 25% 50% 25%;
+  }
+}
+
+@media (min-width: 1100px) 
+{
+  #container
+  {
+    grid-template-columns: 10% 80% 10%;
+  }
+  #Me
+  {
+    flex-direction: row;
+  }
+  #whoIam_header img
+  {
+    height: 9em;
+    width: 12em;
+  }
+  
+}
+
+
+
