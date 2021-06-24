@@ -89,7 +89,7 @@ a
 #head li
 {
   display: inline;
-  margin: 0em 1em;
+  margin: 0em .5em;
 }
 #head a
 {
@@ -191,8 +191,8 @@ a
 }
 .skill img
 {
-  height: 3vh;
-  width: 1.8vw;
+  height: 26px;
+  width: 26px;
   padding: 0.1em;
   border-radius: var(--main-border-radius); 
   background-color: var(--second-color);
@@ -215,7 +215,7 @@ a
 }
 #certificationsContainer
 {
-  width: 80vw;
+  width: 90vw;
   overflow-x: hidden;
   margin: 0 auto;
 }
@@ -223,15 +223,15 @@ a
 {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(2,80vw);
+  grid-template-columns: repeat(2,90vw);
 }
 .certificationBoard
 {
-  margin: 4vh 2% 0vh 2%;  
+  margin: 0.5vh 0.5% 0vh 0.5%;  
   height: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(20em, 1fr));
-  grid-gap: 1.5em;
+  grid-template-columns: repeat(auto-fit,minmax(15em, 1fr));
+  grid-gap: 1em;
   justify-items: center;
   padding-bottom: 1em;
 }
@@ -268,18 +268,18 @@ a
   /* Reset styles */
   list-style-type: none;
   padding-bottom: 20px;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 .dot 
 {
   /* Rounded border */
   border-radius: 9999px;
-  height: 12px;
-  width: 12px; 
+  height: 14px;
+  width: 14px; 
   border: 1px solid rgba(0, 0, 0, .5);
 
   /* Spacing between dots */ 
-  margin: 0 4px;
+  margin: 0 5px;
 }
 
 /* Projects     ***************************************************************** */
@@ -473,7 +473,42 @@ footer
  margin-left: 0.4em;
  margin-top: 0.2em;
 }
-
+@media (min-width: 400px) 
+{
+   #head li 
+   {
+    margin: 0em 1em;
+   }
+   #certificationsContainer
+   {
+    width: 80vw;   
+  }
+  #boardContainer
+  {
+    grid-template-columns: repeat(2,80vw);
+  }
+   .certificationBoard
+   {
+    margin: 4vh 2% 0vh 2%;  
+    grid-template-columns: repeat(auto-fit,minmax(20em, 1fr));
+    grid-gap: 1.5em;
+   }
+   .certification img
+   {
+    height:25vh;
+   }
+   .certificationsDots
+   {
+    padding-top: 40px;
+   }
+   .dot
+   {
+     height: 12px;
+     width: 12px;
+      /* Spacing between dots */ 
+      margin: 0 4px;
+   }
+}
 
 @media (min-width: 900px) 
 {
