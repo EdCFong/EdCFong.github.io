@@ -57,7 +57,7 @@ a
 {
   background-color:var(--main-color) ;
   color: var(--text-color);
-  height: 100vh;
+  height: 100vh; 
 }
 #head strong
 {
@@ -66,14 +66,14 @@ a
 #Container-presentationMessage
 {
   display: grid;
-  grid-template-columns: 15% 70% 15%;
+  grid-template-columns: 15% 70% 15%; 
   
 }
 
 #presentationMessage
 {
   padding-top: 40vh; 
-  grid-column-start: 2;
+  grid-column-start: 2; 
 }
 #head nav
 {
@@ -296,13 +296,13 @@ a
 #h2-moreProjects
 {
  text-align: center;
- margin-top: 8vh;
+ margin-top: 5vh;
  color: var(--link-color-stronger);
  font-weight: lighter;
 }
 #projects
 {
- margin: 6vh 3vw 0vh 3vw; 
+ margin: 2vh 3vw 0vh 3vw; 
  height: auto;
  display: grid;
  grid-template-columns: repeat(auto-fit,minmax(14em, 1fr));
@@ -473,25 +473,23 @@ footer
  margin-left: 0.4em;
  margin-top: 0.2em;
 }
+
+/* #############################################################
+
+ Nedias
+
+################################################################ */
+
 @media (min-width: 400px) 
-{
+{ 
    #head li 
    {
     margin: 0em 1em;
    }
-   #certificationsContainer
-   {
-    width: 80vw;   
-  }
-  #boardContainer
-  {
-    grid-template-columns: repeat(2,80vw);
-  }
-   .certificationBoard
-   {
-    margin: 4vh 2% 0vh 2%;  
-    grid-template-columns: repeat(auto-fit,minmax(20em, 1fr));
-    grid-gap: 1.5em;
+  .certificationBoard
+   { 
+    grid-template-columns: repeat(auto-fit,minmax(23em, 1fr));
+    margin: 4vh auto 0vh auto;  
    }
    .certification img
    {
@@ -505,36 +503,48 @@ footer
    {
      height: 12px;
      width: 12px;
-      /* Spacing between dots */ 
+      
       margin: 0 4px;
+   }
+   #projects
+   {
+    margin: 6vh 3vw 0vh 3vw; 
+   }
+   #h2-moreProjects
+   {
+    margin-top: 8vh;
    }
 }
 
-@media (min-width: 900px) 
-{
-  #Me
+/* ******************************************************** */
+@media (min-width: 800px) 
+{ 
+  #certificationsContainer
   {
-    flex-direction: row;
-    justify-content: space-between;
+    width: 80vw;   
   }
-  #skillsSection
-  {  
-    width: 37%;
-    padding-bottom: 14%;
-  }
-  #whoIam
+  #boardContainer
   {
-    margin-bottom: 0;
-    width: 47%;
+    grid-template-columns: repeat(2,80vw);
   }
+  .certificationBoard
+   { 
+    grid-template-columns: repeat(auto-fit,minmax(24em, 1fr));
+    margin: 4vh 2% 0vh 2%;  
+    grid-gap: 1.5em;
+   }
+}
+
+
+/* ******************************************************** */
+@media (min-width: 1100px) 
+{  
   #Container-presentationMessage
   {
     grid-template-columns: 25% 50% 25%;
   }
-}
 
-@media (min-width: 1100px) 
-{
+
   #container
   {
     grid-template-columns: 10% 80% 10%;
@@ -542,13 +552,28 @@ footer
   #Me
   {
     flex-direction: row;
+    justify-content: space-between;
+  }
+  #whoIam
+  {
+    margin-bottom: 0;
+    width: 47%;
+  }
+  #skillsSection
+  {  
+    width: 37%;
+    padding-bottom: 14%;
   }
   #whoIam_header img
   {
     height: 9em;
     width: 12em;
   }
-  
+
+  .certificationBoard
+   { 
+    grid-template-columns: repeat(auto-fit,minmax(21em, 1fr));
+   }
 }
 
 
