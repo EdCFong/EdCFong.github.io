@@ -78,7 +78,7 @@ a
  position: fixed;
  display: flex;
  justify-content:space-between;
- background-color: rgba(0, 102, 255, 0.945) ;
+ background-color: rgba(0, 102, 255, 0.829) ;
  padding: 0.7em;
  width: 100%;
 }
@@ -106,7 +106,7 @@ a
 /* Container **************************************** */ 
 #container
 {
-  margin: 10vh 0;
+  margin: 20vh 0;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
   grid-auto-flow: column;

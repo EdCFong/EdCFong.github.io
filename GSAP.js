@@ -48,17 +48,59 @@ document.querySelector("#dot1").onclick = () => {
 
 //   ###########################################################################################   
 
-const tl = gsap.timeline({ defaults: { duration: 1 } });
-tl.to("#presentationMessage", { yPercent: 90, xPercent: -40  })
-    .to("#presentationMessage h3", { opacity: 0, duration: 0.5 }, 0.3)
-    //.to("#presentationMessage", { opacity: 0 }, 2)
-   // .to("#head nav h1", {opacity:1}, 1.5)
+const tl_titleDown = gsap.timeline();
+const tl_fixedTitle = gsap.timeline();
+
+tl_titleDown.to("#presentationMessage", { yPercent: 90, duration: 2, ease: "slow" })
+    .to("#presentationMessage h3", { opacity: 0, duration: 0.5 }, 0.3);
+
+tl_fixedTitle.to("#presentationMessage", { opacity: 0, duration: 0.5 })
+    .to("#head nav h1", { opacity: 1, duration: 0.5 }, 0.3)
 
 
 ScrollTrigger.create({
-    animation: tl,
+    animation: tl_titleDown,
     trigger: "#presentationMessage h1",
     start: "top top",
     end: "top top",
-    scrub: 0.5
+    scrub: 0.3
+});
+
+ScrollTrigger.create({
+    animation: tl_fixedTitle,
+    trigger: "#container",
+    start: "top 50%",
+    end: "top top", 
+    scrub: 0.3
+});
+
+
+gsap.from("#head li", {
+    duration: 1.5, 
+    opacity: 0, 
+    delay: 0.5, 
+    stagger: 0.2,
+    ease: "elastic", 
+    force3D: true
+  });
+
+gsap.from("#presentationMessage", {xPercent:-100, duration: 0.7, ease:"customPower0"})
+
+
+//   ###########################################################################################
+//   Me
+
+//   ###########################################################################################
+
+const tl_Me = gsap.timeline();
+tl_Me.from("#whoIam", {xPercent:-140, duration: 0.7, ease:"power3"})
+.from("#skillsSection", {xPercent:140, duration: 0.7, ease:"power3"},0)
+.from("#whoIam p", {opacity:0, duration: 2.5}, 1)
+
+ScrollTrigger.create({
+    animation: tl_Me,
+    trigger: "#whoIam img",
+    start: "top 50%",
+    end: "top 80%", 
+    scrub: 1.3
 });
