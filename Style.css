@@ -22,6 +22,7 @@ body
   background-color: var(--second-color); 
   font-family: 'Titillium Web', sans-serif;
   position: relative;
+  overflow-x: hidden;
 }
 a
 {
@@ -81,6 +82,7 @@ a
  background-color: rgba(0, 102, 255, 0.829) ;
  padding: 0.7em;
  width: 100%;
+ z-index: 5;
 }
 #head nav h1
 {

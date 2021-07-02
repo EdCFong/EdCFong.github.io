@@ -112,7 +112,7 @@ ScrollTrigger.create({
 //   ###########################################################################################
 
 const tl_Certifications = gsap.timeline();
-tl_Certifications.from("#certifications", {xPercent:100, duration: 0.7, ease:"customPower0"})
+tl_Certifications.from("#certifications", {xPercent:140, duration: 0.7, ease:"customPower0"})
 
 ScrollTrigger.create({
     animation: tl_Certifications,
@@ -131,7 +131,7 @@ ScrollTrigger.create({
 //   ###########################################################################################
 
 const tl_Projects = gsap.timeline();
-tl_Projects.from("#projectsSection", {xPercent:-100, duration: 0.7, ease:"customPower0"})
+tl_Projects.from("#projectsSection", {xPercent:-140, duration: 0.7, ease:"customPower0"})
 
 ScrollTrigger.create({
     animation: tl_Projects,
@@ -140,3 +140,32 @@ ScrollTrigger.create({
     end: "top 80%", 
     scrub: 1.5
 });
+
+
+
+//   ###########################################################################################
+//   Footer
+
+//   ###########################################################################################
+
+const tl_Information = gsap.timeline();
+
+tl_Information.from("#social_media_box div", {
+    duration: 2,
+    scale: 0.5,  
+    opacity: 0, 
+    delay: 0.5, 
+    stagger: 0.2,
+    ease: "elastic", 
+    force3D: true
+  });
+
+  ScrollTrigger.create({
+    animation: tl_Information,
+    trigger: "#social_media_box",
+    start: "bottom bottom",
+    end: "bottom 60%", 
+    scrub: 2.5
+});
+
+//document.querySelector(".social_media").hover
