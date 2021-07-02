@@ -93,14 +93,50 @@ gsap.from("#presentationMessage", {xPercent:-100, duration: 0.7, ease:"customPow
 //   ###########################################################################################
 
 const tl_Me = gsap.timeline();
-tl_Me.from("#whoIam", {xPercent:-140, duration: 0.7, ease:"power3"})
-.from("#skillsSection", {xPercent:140, duration: 0.7, ease:"power3"},0)
-.from("#whoIam p", {opacity:0, duration: 2.5}, 1)
+tl_Me.from("#whoIam", {opacity:0, duration: 1.7, ease:"slow"})
+.from("#skillsSection", {opacity:0, duration: 1.7, ease:"slow"},0.5)
 
 ScrollTrigger.create({
     animation: tl_Me,
     trigger: "#whoIam img",
-    start: "top 50%",
+    start: "top 80%",
     end: "top 80%", 
-    scrub: 1.3
+    scrub: 1.5
+});
+
+
+
+//   ###########################################################################################
+//   Certifications
+
+//   ###########################################################################################
+
+const tl_Certifications = gsap.timeline();
+tl_Certifications.from("#certifications", {xPercent:100, duration: 0.7, ease:"customPower0"})
+
+ScrollTrigger.create({
+    animation: tl_Certifications,
+    trigger: "#certifications",
+    start: "top center",
+    end: "top 80%", 
+    scrub: 1.5
+});
+
+
+
+
+//   ###########################################################################################
+//   Projects
+
+//   ###########################################################################################
+
+const tl_Projects = gsap.timeline();
+tl_Projects.from("#projectsSection", {xPercent:-100, duration: 0.7, ease:"customPower0"})
+
+ScrollTrigger.create({
+    animation: tl_Projects,
+    trigger: "#projectsSection",
+    start: "top center",
+    end: "top 80%", 
+    scrub: 1.5
 });
