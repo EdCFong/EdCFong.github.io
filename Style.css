@@ -76,9 +76,8 @@ a
 }
 #head nav
 {
- position: fixed;
  display: flex;
- justify-content:space-between;
+ justify-content: flex-end;
  background-color: rgba(0, 102, 255, 0.829) ;
  padding: 0.7em;
  width: 100%;
@@ -88,6 +87,7 @@ a
 {
   margin: 0;
   opacity: 0;
+  display: none;
 }
 #head ul
 {
@@ -432,10 +432,6 @@ footer
   text-align: center;
   padding-top: 2vh;
 }
-.social_media:hover
-{
-  transform:scale(1.15);
-}
 .social_media_icon
 {
   height: 8vh;
@@ -484,12 +480,13 @@ footer
 
 /* #############################################################
 
- Nedias
+ Medias
 
 ################################################################ */
 
 @media (min-width: 400px) 
 { 
+  
    #head li 
    {
     margin: 0em 1em;
@@ -547,12 +544,14 @@ footer
 /* ******************************************************** */
 @media (min-width: 1100px) 
 {  
+  #head nav 
+  {
+    position: fixed;
+  }
   #Container-presentationMessage
   {
     grid-template-columns: 25% 50% 25%;
   }
-
-
   #container
   {
     grid-template-columns: 10% 80% 10%;
@@ -582,6 +581,18 @@ footer
    { 
     grid-template-columns: repeat(auto-fit,minmax(21em, 1fr));
    }
+
+   #head nav h1
+  {
+    margin: 0;
+    opacity: 0;
+    display: inline;
+  }
+
+  #head nav
+  {
+    justify-content: space-between;
+  }  
 }
 
 
