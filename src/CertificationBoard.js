@@ -27,7 +27,7 @@ function CertificationBoard() {
                 <Certification
                     name="Front End Libraries"
                     issuer="FreeCodeCamp"
-                    certImagen="./imagen/Certificate - ResponsiveWebDesign.png"
+                    certImagen="./imagen/Certificate - Front End Libraries.png"
                     alt="Front End Libraries Certificate"
                     href="https://www.freecodecamp.org/fccc7d4b82a-4ffd-4221-b47a-212f1c605b97" />
             </div>
